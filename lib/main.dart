@@ -1,11 +1,14 @@
+import 'package:firstproject/Login.dart';
 import 'package:flutter/material.dart';
-import 'Drawer.dart'; // Ensure this file has `MyDrawer` class properly defined
+
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,11 +18,17 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Navigation App'),
         ),
-        drawer: MyDrawer(), // ✅ Add your custom drawer here
-        body: Center(
-          child: Text('Welcome to the home page!'),
+        // ✅ Add your custom drawer here
+        body:Center(
+          child: Column(
+            children:[
+             Expanded(child: LoginForm()
+             )
+            ]
+          ),
+        )
         ),
-      ),
-    );
+      );
+ 
   }
 }

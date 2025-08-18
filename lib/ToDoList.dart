@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ToDoApp extends StatefulWidget {
+  const ToDoApp({super.key});
+
   @override
   _ToDoAppState createState() => _ToDoAppState();
 }
